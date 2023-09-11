@@ -192,6 +192,13 @@ li > div {
  padding: 3rem 2.5rem;
 }
 
+label > strong > span {
+  position: absolute;
+  color: red;
+  top: 0px;
+  right: -0.75rem;
+}
+
 input:focus {
   outline: 2px solid blue;
   border-radius: 2px;

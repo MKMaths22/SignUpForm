@@ -74,7 +74,7 @@ div.actualpage {
 }
 
 .rightsidediv {
-  width: 50%;
+  width: max(50%, 585px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -129,8 +129,8 @@ div.pword2 {
   flex-direction: column;
   background-color: grey;
   justify-content: space-around;
-  gap: 0.5rem;
-  padding-left: 1rem;
+  gap: 2rem;
+  padding-left: 3rem;
 }
 
 li > div {
@@ -144,7 +144,10 @@ h2 {
 li + li {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+}
+
+a.login {
+  padding-left: 1rem;
 }
 
 label {
@@ -158,7 +161,7 @@ ul {
 }
 
 input {
-  width: 90%;
+  width: 15rem;
   height: 2rem;
 }
 
@@ -180,5 +183,5 @@ form {
 }
 
 li > div {
- padding: 3rem 2rem;
+ padding: 3rem 3rem;
 }

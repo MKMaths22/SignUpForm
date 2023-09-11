@@ -60,17 +60,17 @@
                 </div>
                 <div class="phoneno">
                   <label for="phoneno">Phone Number</label>
-                  <input type="tel" name="phoneno">
+                  <input type="tel" name="phoneno" pattern="^\+?[\d\s]+$" >
                 </div>
               </li>
               <li>
                 <div class="pword1">
                   <label for="pword">Password</label>
-                  <input type="text" name="pword" required >
+                  <input type="text" name="pword" class="pwordinput" required >
                 </div>
                 <div class="pword2">
                   <label for="confirmpword">Confirm Password</label>
-                  <input type="text" name="confirmpword" required >
+                  <input type="text" name="confirmpword" class="pwordinput" required >
                 </div>
               </li>
             </ul>

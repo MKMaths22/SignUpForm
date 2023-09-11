@@ -67,7 +67,7 @@ div.actualpage {
   background-color: #cccccc;
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: clamp(850px, 80%, 1600px);
   margin-top: 5%;
   margin-bottom: 8%;
   z-index: 1;
@@ -87,7 +87,7 @@ div.actualpage {
   background-color: burlywood;
   flex-grow: 1;
   max-width: 100%;
-  padding-left: 3vw;
+  padding-left: 2.3rem;
   padding-right: 6vw;
   margin-top: 10vw;
 }
@@ -101,27 +101,27 @@ div.actualpage {
 }
 
 div.firstname {
-  background-color: yellow;
+  background-color: #aaaaaa;
 }
 
 div.lastname {
-  background-color: green;
+  background-color: #aaaaaa;
 }
 
 div.email {
-  background-color: blue;
+  background-color: #aaaaaa;
 }
 
 div.phoneno {
-  background-color: burlywood;
+  background-color: #aaaaaa;
 }
 
 div.pword1 {
-  background-color: brown;
+  background-color: #aaaaaa;
 }
 
 div.pword2 {
-  background-color: blue;
+  background-color: #aaaaaa;
 }
 
 .lowerdiv {
@@ -130,15 +130,20 @@ div.pword2 {
   background-color: grey;
   justify-content: space-around;
   gap: 2rem;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
 }
 
 li > div {
   position: relative;
 }
 
+.divforh2 {
+  display: flex;
+  background-color: purple;
+}
+
 h2 {
-  padding-left: 1.3rem;
+  padding-left: 0.2rem;
 }
 
 li + li {
@@ -152,8 +157,9 @@ a.login {
 
 label {
   position: absolute;
-  top: 1.9rem;
-  left: 3rem;
+  font-size: 1.3rem;
+  top: 1.5rem;
+  left: 2.6rem;
 }
 
 ul {
@@ -183,5 +189,12 @@ form {
 }
 
 li > div {
- padding: 3rem 3rem;
+ padding: 3rem 2.5rem;
 }
+
+input:focus {
+  outline: 2px solid blue;
+  border-radius: 2px;
+  box-shadow: 5px 5px 4px 3px #090909;
+}
+

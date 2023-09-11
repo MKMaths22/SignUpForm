@@ -198,3 +198,8 @@ input:focus {
   box-shadow: 5px 5px 4px 3px #090909;
 }
 
+input.pwordinput:invalid {
+  outline: 2px solid red;
+  border-radius: 2px;
+}
+

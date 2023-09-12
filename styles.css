@@ -131,6 +131,7 @@ div.pword2 {
   justify-content: space-around;
   gap: 2rem;
   padding-left: 2.5rem;
+  padding-bottom: 8rem;
 }
 
 li > div {
@@ -169,6 +170,8 @@ ul {
 input {
   width: 15rem;
   height: 2rem;
+  outline: 1px solid brown;
+  border-radius: 1px;
 }
 
 form {
@@ -178,6 +181,11 @@ form {
 
 .accountbutton {
   font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  background-color: burlywood;
+  border: 5px solid #040404;
+  border-radius: 2px;
+  box-shadow: 2px 2px black;
 }
 
 .alreadyp {
@@ -195,11 +203,28 @@ li > div {
 label > strong > span {
   position: absolute;
   color: red;
+  font-family: Verdana, sans-serif;
   top: 0px;
   right: -0.75rem;
 }
 
+input.pwordinput:invalid {
+  outline: 2px solid red;
+  border-radius: 2px;
+}
+
 input:focus {
+  outline: 2px solid blue;
+  border-radius: 2px;
+  box-shadow: 5px 5px 4px 3px #090909;
+}
+
+input:focus:invalid {
+  outline: 2px solid red;
+  border-radius: 2px;
+}
+
+input:focus:placeholder-shown {
   outline: 2px solid blue;
   border-radius: 2px;
   box-shadow: 5px 5px 4px 3px #090909;
@@ -209,4 +234,3 @@ input.pwordinput:invalid {
   outline: 2px solid red;
   border-radius: 2px;
 }
-

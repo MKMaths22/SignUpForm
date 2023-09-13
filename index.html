@@ -60,17 +60,17 @@
                 </div>
                 <div class="phoneno">
                   <label for="phoneno">Phone Number</label>
-                  <input type="tel" name="phoneno" placeholder="01234 567890" pattern="^\+?[\d\s]+$" >
+                  <input type="tel" name="phoneno" placeholder="01234 567890" pattern="^\+?[\d\s]+$" id="phone" >
                 </div>
               </li>
               <li>
                 <div class="pword1">
                   <label for="pword">Password <strong><span aria-label="required">*</span></strong></label>
-                  <input type="text" name="pword" class="pwordinput" required >
+                  <input type="text" name="pword" class="pwordinput" id="pwordone" required >
                 </div>
                 <div class="pword2">
                   <label for="confirmpword">Confirm Password <strong><span aria-label="required">*</span></strong></label>
-                  <input type="text" name="confirmpword" class="pwordinput" required >
+                  <input type="text" name="confirmpword" class="pwordinput" id="pwordtwo" required >
                 </div>
               </li>
             </ul>
@@ -84,4 +84,14 @@
     </div>
   </div>
 </body>
+  <script>
+    let phoneinput = document.getElementById('phone');
+    phoneinput.addEventListener("input", function(e) {
+      phoneinput.setCustomValidity('')
+    })
+    phoneinput.addEventListener("invalid", function(e) {
+      phoneinput.setCustomValidity('Please enter a valid phone number');
+    })
+
+  </script>
 </html>

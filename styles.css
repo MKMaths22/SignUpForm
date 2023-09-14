@@ -5,7 +5,7 @@
 
 body {
   position: relative;
-  background-color: green;
+  background-color: #555555;
 }
 
 @font-face {
@@ -20,8 +20,23 @@ img {
 
 .imagediv {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden;
   position: relative;
+}
+
+#imagecredit {
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  color: white;
+}
+
+#imagecredit > a {
+  color: white;
+  text-decoration: underline;
 }
 
 #banner {

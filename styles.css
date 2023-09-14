@@ -44,7 +44,7 @@ img {
   top: 30%;
   left: 0%;
   z-index: 1;
-  width: min(100%, 779px);
+  width: 100%;
   opacity: 50%;
   color: white;
   background-color: black;
@@ -89,7 +89,7 @@ div.actualpage {
 }
 
 .rightsidediv {
-  width: max(50%, 585px);
+  width: max(50%, 650px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -147,6 +147,7 @@ div.pword2 {
   gap: 2rem;
   padding-left: 2.5rem;
   padding-bottom: 8rem;
+  padding-top: 2rem;
 }
 
 li > div {
@@ -160,6 +161,9 @@ li > div {
 
 h2 {
   padding-left: 0.2rem;
+  font-family: Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 li + li {

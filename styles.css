@@ -1,14 +1,17 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 :root {
   --lowercolour: #d4d4c6;
   --formcolour: #e5e5d7;
   --stripcolour: #b2b2b2;
   --buttoncolour: rgb(119, 74, 7);
   --brighttext: rgb(230, 230, 230);
+  --inputborder: rgb(235, 166, 17);
+  --errorcolour: red;
+  --focuscolour: blue;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -34,11 +37,11 @@ img {
   position: absolute;
   bottom: 1rem;
   text-align: center;
-  color: white;
+  color: var(--brighttext);
 }
 
 #imagecredit > a {
-  color: white;
+  color: var(--brighttext);
 }
 
 #banner {
@@ -97,7 +100,6 @@ div.actualpage {
 
 .rightsidediv {
   background-color: var(--formcolour);
-  /* width: max(50%, 650px)*/
   width: max(50%, 775px);
   display: flex;
   flex-direction: column;
@@ -138,8 +140,6 @@ div.actualpage {
 .shadowtwo {
   background: linear-gradient(var(--stripcolour), var(--lowercolour));
 }
-
-
 
 .lowerdiv {
   display: flex;
@@ -195,7 +195,7 @@ ul {
 input {
   width: 15rem;
   height: 2rem;
-  outline: 1px solid brown;
+  outline: 1px solid var(--inputborder);
   border-radius: 1px;
 }
 
@@ -228,42 +228,42 @@ li > div {
 
 label > strong > span {
   position: absolute;
-  color: red;
+  color: var(--errorcolour);
   font-family: Verdana, sans-serif;
   top: 0px;
   right: -0.75rem;
 }
 
 input.pwordinput:invalid {
-  outline: 2px solid red;
+  outline: 2px solid var(--errorcolour);
   border-radius: 2px;
 }
 
 input:focus {
-  outline: 2px solid blue;
+  outline: 2px solid var(--focuscolour);
   border-radius: 2px;
   box-shadow: 5px 5px 4px 3px #090909;
 }
 
 input:focus:invalid {
-  outline: 2px solid red;
+  outline: 2px solid var(--errorcolour);
   border-radius: 2px;
 }
 
 input:focus:placeholder-shown {
-  outline: 2px solid blue;
+  outline: 2px solid var(--focuscolour);
   border-radius: 2px;
   box-shadow: 5px 5px 4px 3px #090909;
 }
 
 input.pwordinput:invalid {
-  outline: 2px solid red;
+  outline: 2px solid var(--errorcolour);
   border-radius: 2px;
   position: relative;
 }
 
 span.errorspan {
-  color: red;
+  color: var(--errorcolour);
   position: absolute;
   bottom: 1.5rem;
   left: 2.5rem;

@@ -177,7 +177,7 @@ li + li {
 }
 
 a.login {
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   color: var(--buttoncolour);
 }
 
@@ -259,4 +259,12 @@ input:focus:placeholder-shown {
 input.pwordinput:invalid {
   outline: 2px solid red;
   border-radius: 2px;
+  position: relative;
+}
+
+span.errorspan {
+  color: red;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2.5rem;
 }

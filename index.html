@@ -68,7 +68,8 @@
               <li>
                 <div class="pword1">
                   <label for="pword">Password <strong><span aria-label="required">*</span></strong></label>
-                  <input type="text" name="pword" class="pwordinput" id="pwordone" pattern="*[a-z]*" minlength="8" maxlength="30" onkeyup="checkmatch()" required >
+                  <input type="text" name="pword" class="pwordinput" id="pwordone" pattern="*[a-z]*" minlength="8" maxlength="30" placeholder="Between 8 and 30 characters."  onkeyup="checkmatch()" required >
+                  <span class="errorspan">Passwords do not match.</span>
                 </div>
                 <div class="pword2">
                   <label for="confirmpword">Confirm Password <strong><span aria-label="required">*</span></strong></label>
@@ -99,15 +100,18 @@
     function checkmatch() {
       const pwordone = document.getElementById('pwordone');
       const pwordtwo = document.getElementById('pwordtwo');
+      const errorspan = document.querySelector('.errorspan');
 
       if (pwordone.value != pwordtwo.value) {
         pwordone.setCustomValidity('Passwords do not match')
         pwordtwo.setCustomValidity('Passwords do not match')
+        errorspan.textContent = 'Passwords do not match.'
       }
       else
       {
         pwordone.setCustomValidity('')
         pwordtwo.setCustomValidity('')
+        errorspan.textContent = ''
       }
     }
     

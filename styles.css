@@ -3,9 +3,21 @@
   margin: 0;
 }
 
+:root {
+  --lowercolour: #d4d4c6;
+  --formcolour: #e5e5d7;
+  --stripcolour: #b2b2b2;
+  --buttoncolour: rgb(119, 74, 7);
+  --brighttext: rgb(230, 230, 230);
+}
+
 body {
   position: relative;
   background-color: #555555;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 @font-face {
@@ -16,17 +28,6 @@ body {
 img {
   height: 75rem;
   width: auto;
-}
-
-.imagediv {
-  width: min(50%, 775px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  background-color: transparent;
 }
 
 #imagecredit {
@@ -72,15 +73,7 @@ svg {
   margin-top: -2rem;
 }
 
-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
 div.actualpage {
-  background-color: grey;
   display: flex;
   flex-direction: row;
   width: clamp(850px, 80%, 1600px);
@@ -92,8 +85,20 @@ div.actualpage {
   outline: 5px solid black;
 }
 
+.imagediv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+}
+
 .rightsidediv {
-  width: max(50%, 650px);
+  background-color: var(--formcolour);
+  /* width: max(50%, 650px)*/
+  width: max(50%, 775px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -103,69 +108,63 @@ div.actualpage {
   font-family: Helvetica, sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  background-color: burlywood;
+  background-color: var(--lowercolour);
   flex-grow: 1;
   max-width: 100%;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
   padding-left: 2.3rem;
   padding-right: 6vw;
-  margin-top: 10vw;
 }
 
 .formdiv {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
   width: 100%;
-  background-color: orange;
+  background-color: var(--form-colour);
 }
 
-div.firstname {
-  background-color: #aaaaaa;
+.shadowone, .shadowtwo {
+  height: 0.5rem;
+  width: 100%;
 }
 
-div.lastname {
-  background-color: #aaaaaa;
+.shadowone {
+  background: linear-gradient(var(--lowercolour), var(--stripcolour));
 }
 
-div.email {
-  background-color: #aaaaaa;
+.shadowtwo {
+  background: linear-gradient(var(--stripcolour), var(--lowercolour));
 }
 
-div.phoneno {
-  background-color: #aaaaaa;
-}
 
-div.pword1 {
-  background-color: #aaaaaa;
-}
-
-div.pword2 {
-  background-color: #aaaaaa;
-}
 
 .lowerdiv {
   display: flex;
   flex-direction: column;
-  background-color: grey;
+  background-color: var(--lowercolour);
   justify-content: space-around;
   gap: 2rem;
   padding-left: 2.5rem;
-  padding-bottom: 10.8rem;
+  padding-bottom: 14rem;
   padding-top: 3rem;
-  margin-bottom: 0;
+  width: 100%;
 }
 
 li > div {
   position: relative;
+  background-color: var(--form-colour);
 }
 
 .divforh2 {
   display: flex;
-  background-color: purple;
+  background-color: var(--form-colour);
+  padding-bottom: 1.5rem;
 }
 
 h2 {
-  padding-left: 0.2rem;
   font-family: Helvetica, sans-serif;
   font-size: 2rem;
   font-weight: bold;
@@ -174,10 +173,12 @@ h2 {
 li + li {
   display: flex;
   flex-direction: row;
+  background-color: var(--form-colour);
 }
 
 a.login {
   padding-left: 1rem;
+  color: var(--buttoncolour);
 }
 
 label {
@@ -204,9 +205,10 @@ form {
 }
 
 .accountbutton {
+  color: var(--brighttext);
   font-size: 1.5rem;
   padding: 0.8rem 1rem;
-  background-color: burlywood;
+  background-color: var(--buttoncolour);
   border: 5px solid #040404;
   border-radius: 2px;
   box-shadow: 2px 2px black;

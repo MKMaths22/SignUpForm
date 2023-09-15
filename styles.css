@@ -3,6 +3,8 @@
   --formcolour: #e5e5d7;
   --stripcolour: #b2b2b2;
   --buttoncolour: rgb(119, 74, 7);
+  --buttonborder: rgb(58, 9, 9);
+  --buttonshadow: rgb(59, 55, 55);
   --brighttext: rgb(230, 230, 230);
   --inputborder: rgb(235, 166, 17);
   --errorcolour: red;
@@ -75,6 +77,8 @@ svg {
 
 .forsvg {
   margin-top: -2rem;
+  display: flex;
+  justify-content: center;
 }
 
 div.actualpage {
@@ -210,9 +214,9 @@ form {
   font-size: 1.5rem;
   padding: 0.8rem 1rem;
   background-color: var(--buttoncolour);
-  border: 5px solid #040404;
+  border: 5px solid var(--buttonborder);
   border-radius: 2px;
-  box-shadow: 2px 2px black;
+  box-shadow: 2px 2px var(--buttonshadow);
 }
 
 .alreadyp {
